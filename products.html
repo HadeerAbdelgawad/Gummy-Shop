@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart | GummyShop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body onresize="size()">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="left-header">
+            <a href="index.html" class="logo">Gummy<span>Shop</span></a>
+        </div>
+        <div class="logout-box" style="margin-left: auto;">
+            <a href="login.html" class="logout">Logout</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="page-hero-content">
+            <h1>🛒 My <span>Cart</span></h1>
+            <p>Review your gummy selections before checkout</p>
+        </div>
+    </div>
+
+    <!-- CART ITEMS -->
+    <div class="cart-section">
+        <div class="container-box"></div>
+
+        <!-- TOTAL PRICE -->
+        <div class="total-price-box">
+            <div class="total-price-inner">
+                <span class="total-label">Order Total</span>
+                <span id="totalPrice" class="total-amount">0$</span>
+                <button class="checkout-btn">
+                    <i class="fas fa-lock"></i> Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider">
+        <span>💛 Your Favourites</span>
+    </div>
+
+    <!-- FAVOURITES SWIPER -->
+    <div class="fav-section">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="page-footer-space"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.
