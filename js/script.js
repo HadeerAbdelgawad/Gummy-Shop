@@ -92,6 +92,7 @@ const product9 = new products(
 );
 
 function draw() {
+    row.innerHTML = '' 
     for (let i = 1; i < product.length; i++) {
         row.innerHTML += `
     <div class="product-card col-lg-4 col-md-6 col-sm-12 mt-3 mb-3">
@@ -142,7 +143,7 @@ function addItems(id) {
 
 function removeItems(id) {
     let removeItem = document.getElementById(id)
-    let addItem = document.getElementById(id / 10000);
+    let addItem = document.getElementById(parseInt(id) / 10000);  // ✅
     addItem.style.display = 'block';
     removeItem.style.display = 'none';
 
@@ -218,7 +219,7 @@ function cartBtn() {
 
 function addFavourite(id, e) {
     const ele = document.getElementById(id)
-    mainId = id / 100000;
+     mainId = parseInt(id) / 100000; 
     if (localStorage.getItem('first') && localStorage.getItem('log')) {
         if (ele.style.color == 'red') {
             ele.style.color = 'rgb(185, 184, 184)'
@@ -229,7 +230,7 @@ function addFavourite(id, e) {
             localStorage.setItem('favourite', JSON.stringify(favourite));
         } else {
             ele.style.color = 'red'
-            favourite.push(product[id / 100000])
+              favourite.push(product[parseInt(id) / 100000])
             localStorage.setItem('favourite', JSON.stringify(favourite));
         }
     } else {
